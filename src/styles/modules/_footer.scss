@@ -1,0 +1,147 @@
+.footer {
+    padding-top: 141px;
+    // .footer__row
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+
+    }
+
+    // .footer__header
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        column-gap: 62.5px ;
+        justify-content: start;
+    }
+
+    // .footer__logo
+
+    &__logo {
+    }
+
+    // .footer__description
+
+    &__description {
+        font-weight: 300;
+        font-size: 20px;
+        text-transform: uppercase;
+        max-width: 900px;
+        color: $font-color-gray;
+    }
+
+    // .footer__privacy
+
+    &__privacy {
+    }
+}
+.privacy {
+    margin-bottom: 160px;
+    // .privacy__row
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+
+    // .privacy__item
+
+    &__item {
+    }
+
+    // .privacy__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 1.72 ;
+        text-transform: uppercase;
+        margin-top: 15px;
+    }
+
+    // .privacy__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px ;
+    }
+    &__list:last-child{
+        row-gap: 50px;
+    }
+    &__list li{
+        max-width: 230px;
+        font-weight: 300;
+        line-height: 1.72;
+        letter-spacing: 0.8;
+        color: $font-color-gray;
+    }
+    &__item:last-child li:first-child{
+
+        position: relative;
+    }
+    &__input{
+            height: 54px;
+            width: 100%;
+            border: 1px solid $grey;
+            padding-left: 27px ;
+            border-radius: 54px;
+    }
+    &__button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 54px;
+        aspect-ratio: 1;
+        background-image: url(img/footer/arrow-top.svg) ;
+        background-position:center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: 1px solid $white;
+        border-radius: 50%;
+    }
+}
+.social {
+
+    // .social__list
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        column-gap: 18px ;
+        align-items: center;
+    }
+    &__list a{
+        display: flex;
+        align-self: center;
+    }
+    // .social__item
+
+    &__item {
+    }
+}
+
+@media(max-width: 768.9px){
+    .privacy__row {
+        grid-template-columns: repeat(2, 2fr);
+        row-gap: 20px;
+        }
+        .privacy__list{
+            row-gap: 20px;
+            }
+            .footer__logo{
+                flex-shrink: 0;
+                }
+}
+                
+@media(max-width: 425.9px){
+    .footer__header{
+        flex-wrap: wrap;
+        row-gap: 20px;
+
+    }
+}

@@ -1,0 +1,19 @@
+@keyframes text-up{
+    from{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    to{
+        top: 3px;
+        left: 0px;
+    }
+}
+
+.flex-row-reverse{
+    flex-direction: row-reverse;
+}
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+  }

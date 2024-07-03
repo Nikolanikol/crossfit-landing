@@ -1,0 +1,186 @@
+.calc {
+    padding-block: 145px;
+    // .calc__container
+
+    &__container {
+        max-width: 1310px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 36px;
+        justify-content: center;
+    }
+
+    // .calc__body
+
+    &__body {
+        width: 100%;
+        max-width: 627px;
+        padding-left: 40px;
+    }
+
+    // .calc__header
+
+    &__header {
+        width: 100%;
+        max-width: 385px;
+    }
+
+    // .calc__title
+
+    &__title {
+        @include title-style;
+        position: relative;
+        text-transform: uppercase;
+    }
+    &__title::after{
+        @include title-opacity;
+    }
+
+    &__title::before{
+        @include title-x;
+    }
+    // .calc__subtitle
+
+    &__subtitle {
+        @include subtitle-style;
+
+    }
+
+    // .calc__form
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 18px;
+    }
+
+    // .calc__input
+
+    &__input {
+        height: 54px;
+        border: 1px solid $grey;
+        border-radius: 54px;
+        color: $font-color-gray;
+        font-weight: 16;
+        padding-inline: 27px;
+    }
+    &__input.wide{
+        grid-column: -1/1;
+    }
+    // .calc__button
+
+    &__button {
+    }
+
+    // .calc__table
+
+    &__table {
+        position: relative;
+        width: 100%;
+        max-width: 610px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__table::after{
+        content: '';
+        width: 610px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: $black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.calc__table table{
+    position: relative;
+    z-index: 1;
+}
+.calc__table table thead th{
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 700;
+    padding-block: 17px;
+}
+.calc__table table tbody td{
+    text-align: left;
+    font-weight: 300;
+    line-height: 1.75;
+    padding-block: 15px;
+    border-top: 1px solid $grey;
+}
+.calc__table table tfoot td{
+    text-align: left;
+    font-weight: 300;
+    line-height: 1.75;
+    padding-block: 15px;
+}
+.calc__table table thead th:first-child{
+    border-right: 1px solid $grey;
+}
+.calc__table table tbody td:first-child{
+    border-right: 1px solid $grey;
+}
+
+.calc__table table thead th:last-child{
+    padding-left: 32px ;
+}
+.calc__table table tbody td:last-child{
+    padding-left: 32px ;
+}
+.calc__table table tbody tr:last-child td:first-child{
+    position: relative;
+}
+.calc__table table tbody tr:last-child td:first-child::after{
+    content: '';
+    width: 70%;
+    background-color: $grey;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+@media(max-width: 1024.9px){
+
+    .calc__table::after {
+
+        width: 500px;
+    }
+    .calc__body {
+        width: 100%;
+        max-width: 480px;
+        padding-left: 64px;
+    }
+}
+@media(max-width: 768.9px){
+
+    .calc__container {
+
+        flex-direction: column;
+        row-gap: 100px;
+    }
+}
+
+@media(max-width: 425.9px){
+    .calc__form{
+        grid-template-columns: 1fr;
+    }
+    .calc__table::after {
+        width: 415px;
+    }
+    .calc__table table thead th:last-child {
+        padding-left: 5px;
+    }
+    .calc__table table tbody td:last-child {
+        padding-left: 5px;
+    }
+    .calc__table table tbody td {
+        padding-block: 5px
+    }
+}

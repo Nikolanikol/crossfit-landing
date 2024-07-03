@@ -1,0 +1,35 @@
+
+body{
+    font-family: 'Heebo', sans-serif;
+    background-color: $main-grey;
+    font-size: 16px;
+    color: $font-color-white;
+}
+.nav__item-active::after{
+    content: '';
+    width: 5px;
+    aspect-ratio: 1;
+    background-color: $white;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: -10px;
+}
+.sliderbar__item-active{
+    background-color: $white;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.footer{
+
+}
+.motivation__container{
+    max-width: 637px;
+}
+.container{
+    max-width: 1885px;
+    padding: 0 15px;
+    margin: 0 auto;
+}

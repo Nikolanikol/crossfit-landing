@@ -1,0 +1,96 @@
+
+.motivation {
+
+    // .motivation__row
+
+    &__row {
+    }
+
+    // .motivation__item
+
+    &__item {
+
+    }
+
+    // .motivation__container
+
+    &__container {
+        max-width: 1330px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        column-gap: clamp(30px, 8.85vw ,170px);
+    }
+
+    // .motivation__body
+
+    &__body {
+        padding-left: 35px;
+    }
+
+    // .motivation__title
+
+    &__title {
+        @include title-style;
+    }
+    &__title::after{
+        @include title-opacity;
+    }
+    &__title::before{
+        @include title-x;
+    }
+
+    // .motivation__subtitle
+
+    &__subtitle {
+        @include subtitle-style
+    }
+
+    // .motivation__button
+
+    &__button {
+    }
+
+    // .motivation__img
+
+    &__img {
+        margin-block: -60px;
+    }
+}
+.motivation__item:nth-child(odd){
+    background-color: $black;
+}
+.motivation__item:nth-child(even) .motivation__container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.motivation__item:last-child .motivation__img{
+    margin-bottom: 0;
+}
+
+@media(max-width:1024.9px){
+    
+    .motivation__body {
+        padding-left: 64px;
+    }
+}
+
+@media(max-width:768.9px){
+    .motivation__img {
+        margin-block: 0px;
+    }
+    .motivation__item{
+        padding-top: 20px;
+    }
+}
+@media(max-width:425.9px){
+    .motivation__container{
+        flex-direction: column !important;
+    }
+    .motivation__button{
+        margin-bottom: 20px;
+    }
+}

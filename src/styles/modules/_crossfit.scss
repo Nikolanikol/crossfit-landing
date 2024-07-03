@@ -1,0 +1,78 @@
+.crossfit {
+    // height: 985px;
+    padding-top: 370px;
+    // .crossfit__row
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+    }
+
+    // .crossfit__text
+
+    &__text {
+        margin-bottom: 80px;
+    }
+
+    // .crossfit__subtitle
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 30px;
+        position: relative;
+        padding-left: 224px;
+    }
+    &__subtitle::after{
+        content: '';
+        width: 194px;
+        aspect-ratio: 1;
+        background-image: url(img/icons/white-arr-down.svg);
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+    }
+
+    // .crossfit__title
+
+    &__title {
+        font-weight: 700;
+        font-size: clamp(10vw, 173px, 10.5vw); ;;
+        line-height: 1;
+    }
+
+    // .crossfit__slidebar
+
+    &__slidebar {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 40px;
+        justify-content: center;
+    }
+}
+
+
+.sliderbar {
+
+    // .sliderbar__item
+
+    &__item {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid $white;
+        margin: 7px;
+    }
+}
+@media(max-width: 425.9px){
+    .crossfit__subtitle::after{
+        width: 135px;
+        background-size: cover;
+    }
+    .crossfit__subtitle{
+        padding-left: 160px;
+    }
+    .crossfit{
+        padding-top: 160px;
+    }
+}
